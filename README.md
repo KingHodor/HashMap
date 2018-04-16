@@ -26,4 +26,4 @@
 
 ## Getting help
 
-Please contact support@evercoin.com
+Please contact ahmet@evercoin.com
