@@ -9,7 +9,7 @@ void func(void *value, void *key) {
     printf("value: %s - key: %s\n", (char *) value, (char *) key);
 }
 
-void test2() {
+void test1() {
 
     HashMap hm;
     char *ret;
@@ -52,13 +52,20 @@ void test2() {
     printf("Hashmap size :%d\n", (int) HMSize(hm));
     printf("HM is empty: %d\n", HMIsEmpty(hm));
 
+    HMPut(hm, key4, "value 5");
+    ret = HMGet(hm, key4);
+    printf("%s\n", ret);
+
+    HMPutIfAbsent(hm, key4, "value 6");
+    ret = HMGet(hm, key4);
+    printf("%s\n", ret);
+
     HMFree(hm);
 
 
 }
 
 int main() {
-    //test1();
-    test2();
+    test1();
     return 0;
 }

@@ -10,15 +10,19 @@
 
 4.HMPutAll : Copies all of the mappings from the specified map to this map.
 
-5.HMIterotor : Calls a function that is specified as paramater with the elements in this set.
+5.HMPutIfAbsent :  Associates the specified value with the specified key in this map if only absent.
 
-6.HMSize : Returns the number of key-value mappings in this map.
+6.HMIterotor : Calls a function that is specified as paramater with the elements in this set.
 
-7.HMIsEmpty : Check this map contains no key-value mappings.
+7.HMSize : Returns the number of key-value mappings in this map.
 
-8.HMRemove : Removes the mapping for the specified key from this map if present.
+8.HMIsEmpty : Check this map contains no key-value mappings.
 
-9.HMFree : Deallocates the Hashmap memory.
+9.HMRemove : Removes the mapping for the specified key from this map if present.
+
+10.HMClear : Removes all of the mappings from this map.
+
+11.HMFree : Deallocates the Hashmap memory.
 
 ## Getting help
 

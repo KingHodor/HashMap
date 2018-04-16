@@ -4,7 +4,10 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 #include "HashMap.h"
+
+#define  MAX_KEY_LEN 512
 
 static int hash(void *ptr, int size) {
     return (int) (((long) ptr) % size);
@@ -81,6 +84,13 @@ void HMPut(HashMap hm, char *key, void *value) {
         rehash(hm);
 }
 
+void HMPutIfAbsent(HashMap hm, char *key, void *value){
+    void *absent = HMGet(hm, key);
+    if(absent == NULL){
+        HMPut(hm, key, value);
+    }
+}
+
 void HMPutAll(HashMap hm, HashMap copy) {
     int i;
     Item item;
@@ -136,6 +146,24 @@ void HMRemove(HashMap hm, char *key) {
             return;
         }
         item = next;
+    }
+}
+
+void HMClear(HashMap hm){
+    char strs[hm->count][MAX_KEY_LEN];
+
+    int i,j;
+    Item item;
+
+    for (i = 0; i < hm->size; i++) {
+        for (item = hm->buckets[i]; item != NULL; item = item->next) {
+            strcpy(strs[i], item->key);
+            printf("%s\n", strs[i]);
+        }
+    }
+
+    for (j = 0; j < hm->count; ++j) {
+        HMRemove(hm, strs[j]);
     }
 }
 
