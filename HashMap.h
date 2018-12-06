@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2017, Evercoin. All Rights Reserved.
+ * Copyright (c) 2016-2017 . All Rights Reserved.
  */
 
 #ifndef HASHMAP_HEADER
