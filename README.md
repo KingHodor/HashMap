@@ -26,4 +26,4 @@
 
 ## Getting help
 
-Please contact ahmet@evercoin.com
+Please contact sfa.alptekin@gmail.com
